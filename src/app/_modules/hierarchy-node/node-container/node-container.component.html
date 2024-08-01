@@ -1,0 +1,8 @@
+<div id="container_recursive_item">
+  <ul class="flex-item">
+    @for (item of nodes; track $index) {
+      <recursive-item [item]="item" [expandedItem]="expandedItem" (toggle)="onToggle($event)" #recursiveItemComponent>
+      </recursive-item>
+    }
+  </ul>
+</div>

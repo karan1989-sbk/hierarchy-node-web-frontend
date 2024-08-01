@@ -1,0 +1,100 @@
+.menu-item {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    align-items: center;
+
+    &:hover {
+        background-color: #e0e0e0;
+    }
+
+    .toggle-icon {
+        margin-left: 10px;
+        i {
+            font-size: 0.7rem;
+            color: #808080;
+            font-weight: 100;
+        }
+    }
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+    margin: 0;
+    overflow: hidden;
+
+    li {
+        .menu-item {
+            &:hover {
+                background-color: #e2eaf7;
+                color: #2f5ab2;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            &.selected {
+                background-color: #e2eaf7;
+                color: #2f5ab2;
+                border-radius: 4px 0px 0px 4px;
+                box-sizing: border-box;
+                border-right: 1px solid;
+            }
+        }
+
+        ul {
+            margin-left: 20px;
+            border-left: 1px dashed #ddd;
+            padding-left: 10px;
+
+            li {
+                .menu-item {
+                    background-color: #ffffff;
+
+                    &:hover {
+                        background-color: #e2eaf7;
+                        color: #2f5ab2;
+                        border-radius: 4px;
+                        box-sizing: border-box;
+                    }
+
+                    &.selected {
+                        background-color: #e2eaf7;
+                        color: #2f5ab2;
+                        border-radius: 4px 0px 0px 4px;
+                        box-sizing: border-box;
+                        border-right: 1px solid;
+                    }
+                }
+
+                ul {
+                    margin-left: 20px;
+                    border-left: 1px dashed #ddd;
+                    padding-left: 10px;
+
+                    li {
+                        .menu-item {
+                            background-color: #ffffff;
+
+                            &:hover {
+                                background-color: #e2eaf7;
+                                color: #2f5ab2;
+                                border-radius: 4px;
+                                box-sizing: border-box;
+                            }
+
+                            &.selected {
+                                background-color: #e2eaf7;
+                                color: #2f5ab2;
+                                border-radius: 4px 0px 0px 4px;
+                                box-sizing: border-box;
+                                border-right: 1px solid;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
