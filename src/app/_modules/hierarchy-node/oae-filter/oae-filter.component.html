@@ -1,0 +1,5 @@
+<p-button icon="pi pi-filter" [rounded]="true" [text]="true" [raised]="true" [severity]="'secondary'"
+    (click)="hide()" />
+<node-container [@expandcollapse]="isShow ? 'expanded' : 'collapsed'" [ngClass]="{'hidden': !isShow}" [nodes]="items"
+    [ngStyle]="{position: 'absolute', top: '58px', left: '19px'}" #nodeContainer>
+</node-container>

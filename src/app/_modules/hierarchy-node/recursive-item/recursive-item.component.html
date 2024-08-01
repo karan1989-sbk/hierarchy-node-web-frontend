@@ -1,0 +1,25 @@
+<li>
+  <div class="menu-item" (click)="onToggle($event, item)" [class.selected]="isSelected(item)">
+    <p-iconField iconPosition="left">
+      <span [class]="item.icon" style="font-size: 14px;"></span>
+      {{ item.label }}
+    </p-iconField>
+
+    @if (item.items) {
+      <span class="toggle-icon">
+        <ng-container *ngIf="isExpanded;else angleDown">
+          <i class="pi pi-angle-up"></i>
+        </ng-container>
+        <ng-template #angleDown>
+          <i class="pi pi-angle-down"></i>
+        </ng-template>
+      </span>
+    }
+  </div>
+
+  @for (subItem of item.items; track $index) {
+    <ul [@expandcollapse]="isExpanded ? 'expanded' : 'collapsed'">
+      <recursive-item [item]="subItem" [expandedItem]="expandedItem" (toggle)="onToggleSubItem($event)"></recursive-item>
+    </ul>
+  }
+</li>
